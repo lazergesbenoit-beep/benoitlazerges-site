@@ -1,0 +1,69 @@
+:root{--bg:#0d0d0e;--bg2:#141416;--fg:#f3efe8;--mute:#a9a59c;--gold:#d4b27a;--line:#2c2c2e;--pad:clamp(20px,5vw,72px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:Inter,sans-serif;line-height:1.5}
+a{color:inherit;text-decoration:none}img,video{max-width:100%;display:block}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;margin:0}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 18px}
+.top{position:fixed;inset:0 0 auto 0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:22px var(--pad);transition:background .3s}
+.top.solid{background:rgba(13,13,14,.92);backdrop-filter:blur(8px)}
+.brand{font-family:'Cormorant Garamond',serif;font-size:22px;letter-spacing:.22em}
+nav{display:flex;gap:32px;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+nav a:hover,.lnk:hover{color:var(--gold)}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
+.burger span{display:block;height:2px;background:var(--fg);margin:6px 8px}
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(0deg,var(--bg) 3%,rgba(13,13,14,.5) 45%,rgba(13,13,14,.35))}
+.hero-in{position:relative;padding:0 var(--pad) 80px;max-width:1150px}
+.hero h1{font-size:clamp(44px,8vw,112px);line-height:.98}
+.cta{display:flex;gap:20px;flex-wrap:wrap;align-items:center;margin-top:36px}
+.btn{font:inherit;color:var(--fg);background:none;border:1px solid var(--gold);padding:16px 28px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;min-height:48px}
+.btn:hover{background:var(--gold);color:var(--bg)}
+.lnk{font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:14px 8px}
+.intro{padding:80px var(--pad) 40px}
+.quote{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3.2vw,42px);line-height:1.25;max-width:960px;margin:0 0 56px;color:#e9e3d8}
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:32px;border-top:1px solid var(--line);padding-top:32px;margin:0}
+.stats dt{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,4.5vw,60px);color:var(--gold)}
+.stats dd{margin:0;font-size:13px;color:var(--mute)}
+.work,.photos{padding:80px var(--pad)}
+.head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:32px}
+.head h2,.about h2,.brands h2{font-size:clamp(34px,4vw,56px);line-height:1.05}
+.head span{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
+.card.big{grid-column:1/-1}
+.card button{position:relative;display:block;width:100%;padding:0;border:0;background:#1a1a1c;aspect-ratio:16/9;overflow:hidden;cursor:pointer}
+.card.big button{aspect-ratio:21/9}
+.card img,.card video{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.card button:hover img,.card button:hover video{transform:scale(1.04)}
+.card i{position:absolute;left:20px;bottom:20px;background:var(--bg);color:var(--fg);font-style:normal;font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:10px 14px}
+.card h3{font-size:28px;margin:16px 0 2px}.card p{margin:0;font-size:13px;color:var(--mute)}
+.about{display:grid;grid-template-columns:1fr 1.3fr;gap:72px;padding:96px var(--pad);background:var(--bg2);align-items:center}
+.about img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top}
+.about h2{margin-bottom:28px}.about p{font-size:17px;line-height:1.7;color:#d6d1c6}
+.tags{list-style:none;padding:0;margin:32px 0 0;display:flex;flex-wrap:wrap;gap:10px}
+.tags li{border:1px solid #3a3a3d;padding:8px 14px;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.brands{padding:96px var(--pad)}.brands h2{margin-bottom:48px}
+.logos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.logos li{background:var(--bg);height:96px;display:flex;align-items:center;justify-content:center;padding:20px}
+.logos img{max-height:100%;max-width:100%;object-fit:contain;filter:brightness(0) invert(1);opacity:.75;transition:opacity .3s}
+.logos li:hover img{opacity:1}
+.mason{columns:3;column-gap:20px}
+.mason figure{margin:0 0 20px;break-inside:avoid;overflow:hidden}
+.mason img{width:100%;height:auto;transition:transform .6s}.mason figure:hover img{transform:scale(1.03)}
+.contact{padding:96px var(--pad) 56px;background:var(--gold);color:var(--bg)}
+.contact h2{font-size:clamp(40px,7vw,96px);line-height:1;margin-bottom:36px}
+.contact .row{display:flex;flex-wrap:wrap;gap:24px 56px;align-items:center;font-size:17px}
+.mail{border-bottom:1px solid var(--bg)}
+.dl{background:var(--bg);color:var(--fg);padding:16px 28px;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+.social{display:flex;gap:28px;margin-top:56px;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+.modal{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.94);display:flex;align-items:center;justify-content:center;padding:4vw}
+.modal[hidden]{display:none}.frame{width:min(100%,1400px);aspect-ratio:16/9;max-height:88vh}.frame iframe{width:100%;height:100%;border:0;background:#000}
+.close{position:absolute;top:16px;right:16px;width:48px;height:48px;background:none;border:1px solid #555;color:var(--fg);font-size:18px;cursor:pointer}
+@media(max-width:900px){
+ .stats{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}.card.big button{aspect-ratio:16/9}
+ .about{grid-template-columns:1fr;gap:40px}.mason{columns:2}
+ .burger{display:block}
+ nav{position:fixed;inset:0 0 auto 0;top:70px;background:var(--bg);flex-direction:column;gap:0;padding:8px var(--pad) 24px;display:none}
+ nav.open{display:flex}nav a{padding:16px 0;border-bottom:1px solid var(--line)}
+}
+@media(max-width:520px){.mason{columns:1}.brand{font-size:18px}}
