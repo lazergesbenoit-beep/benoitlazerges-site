@@ -1,5 +1,5 @@
-const top=document.querySelector('.top'),nav=document.querySelector('nav'),burger=document.querySelector('.burger');
-addEventListener('scroll',()=>top.classList.toggle('solid',scrollY>60));
+const bar=document.querySelector('.top'),nav=document.querySelector('nav'),burger=document.querySelector('.burger');
+addEventListener('scroll',()=>bar.classList.toggle('solid',scrollY>60));
 burger.onclick=()=>{const o=nav.classList.toggle('open');burger.setAttribute('aria-expanded',o)};
 nav.onclick=()=>nav.classList.remove('open');
 const modal=document.getElementById('modal'),player=document.getElementById('player');
